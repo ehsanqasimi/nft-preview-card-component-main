@@ -1,0 +1,104 @@
+$SoftBlue: hsl(215, 51%, 70%);
+$Cyan: hsl(178, 100%, 50%);
+$VeryDarkBlueMainBackground : hsl(217, 54%, 11%); //(main BG)
+$VeryDarkBlueCardBackground : hsl(216, 50%, 16%); //(card BG)
+$VeryDarkBlue : hsl(215, 32%, 27%); //(line)
+$White: hsl(0, 0%, 100%);
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $VeryDarkBlueMainBackground;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container{
+    position: absolute;
+    width: 300px;
+    padding: 15px;
+    background-color: $VeryDarkBlueCardBackground;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.415);
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .nft{
+        width: 100%;
+        border-radius: 10px;
+    }
+    .title{
+        color: $White;
+    }
+    .desc{
+        color: $SoftBlue; 
+    }
+    .info{
+        display: flex;
+        justify-content: space-between;
+        .currency{
+            color: $Cyan;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .dueDate{
+            color: $SoftBlue;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+
+
+
+
+    .avatar{
+        display: flex;
+        height: 50px;
+        align-items: center;
+        gap: 10px;
+        border-top: .5px solid $SoftBlue;
+        font-weight: 300;
+        padding-top: 10px;
+        .thing{
+            font-weight: 700;
+            color: white;
+        }
+        .bio{
+            color: white;
+        }
+        img{
+            border: 1px solid white;
+            border-radius: 50%;
+            height: 100%;
+        }
+    }
+
+}
+
+.attribution{
+    color: white;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    .doer{
+        font-weight: 700;
+        color: white;
+    }
+    .challenger{
+        font-weight: 700;
+        color: white;
+    }
+}
